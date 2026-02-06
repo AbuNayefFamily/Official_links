@@ -1,141 +1,283 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Official Links</title>
+<title>Abu Naif Family | عائلة أبو نايف</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
 
   body {
     font-family: 'Cairo', sans-serif;
-    background: linear-gradient(135deg, #fceabb, #f8b500, #f6a700);
+    /* ألوان العلم الفلسطيني متحركة */
+    background: linear-gradient(-45deg, #000000, #149954, #E4312b, #f0f0f0);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    animation: palestineFlag 12s ease infinite;
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 15px;
     color: #333;
-    overflow-x: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
   }
 
-  @keyframes gradientBG {
+  @keyframes palestineFlag {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
   }
 
+  /* حاوية العنوان */
+  .header-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    margin-bottom: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    max-width: 90%;
+  }
+
   h1 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 28px;
+    margin: 0;
+    color: #000;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin: 5px 0 0 0;
+    color: #555;
+    font-weight: 600;
+  }
+
+  /* تنسيق الأزرار الجديد */
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   .button {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 90%;
-    max-width: 320px;
-    margin: 15px auto;
-    padding: 18px;
+    justify-content: space-between; /* توزيع المحتوى */
+    width: 100%;
+    max-width: 380px;
+    padding: 15px 25px;
     font-size: 18px;
     font-weight: bold;
     color: white;
     text-decoration: none;
-    border-radius: 15px;
-    box-shadow: 0 6px 10px rgba(0,0,0,0.25);
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 50px; /* شكل بيضاوي */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: pointer;
     overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.2);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .button span {
+    flex-grow: 1;
+    text-align: center;
   }
 
   .button i {
-    margin-right: 12px;
-    font-size: 22px;
+    font-size: 24px;
   }
 
-  .paypal { background: linear-gradient(45deg, #0070ba, #00a0ff); }
-  .usdt { background: linear-gradient(45deg, #27ae60, #2ecc71); }
-  .whatsapp { background: linear-gradient(45deg, #25d366, #1ebea5); }
-  .youtube { background: linear-gradient(45deg, #ff0000, #ff4d4d); }
-  .youtube-member { background: linear-gradient(45deg, #ff4d4d, #ff1a1a); }
-  .tiktok { background: linear-gradient(45deg, #010101, #333333); }
-  .tiktok-subscribe { background: linear-gradient(45deg, #222222, #555555); }
-
+  /* ألوان الأزرار */
+  .paypal { background: linear-gradient(90deg, #003087, #0070ba); }
+  .usdt { background: linear-gradient(90deg, #26A17B, #167e5e); }
+  .whatsapp { background: linear-gradient(90deg, #25D366, #128C7E); }
+  .youtube { background: linear-gradient(90deg, #FF0000, #c40202); }
+  .youtube-mem { background: linear-gradient(90deg, #5e02a3, #9b34eb); } /* لون مميز للانتساب */
+  .tiktok { background: linear-gradient(90deg, #000000, #252525); }
+  
   .button:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 14px rgba(0,0,0,0.35);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    filter: brightness(1.1);
   }
 
-  p {
-    margin-top: 50px;
-    font-size: 17px;
+  /* رسالة الشكر */
+  .thank-you-card {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 40px auto 20px;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    line-height: 1.6;
+    border-right: 5px solid #E4312b; /* لمسة جمالية حمراء */
+    border-left: 5px solid #149954; /* لمسة جمالية خضراء */
   }
 
-  /* فقاعات عند النقر */
+  .thank-you-card p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .ar-text { font-weight: 700; color: #000; font-size: 18px; }
+  .en-text { font-weight: 400; color: #555; font-size: 14px; font-style: italic;}
+
+  /* فقاعات */
   .bubble {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background: rgba(255,255,255,0.8);
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.5);
     border-radius: 50%;
     pointer-events: none;
     animation: rise 1s ease-out forwards;
   }
 
   @keyframes rise {
-    0% { transform: translate(0,0) scale(1); opacity: 1; }
-    100% { transform: translate(var(--x), -80px) scale(0.5); opacity: 0; }
+    0% { transform: translate(0,0) scale(0.5); opacity: 1; }
+    100% { transform: translate(var(--x), -120px) scale(1.2); opacity: 0; }
   }
 
+  /* عداد الزيارات */
+  .visitor-counter {
+    position: fixed;
+    bottom: 15px;
+    right: 15px; /* يمين الشاشة */
+    background: #222;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    z-index: 1000;
+    border: 1px solid #444;
+  }
+  
+  .visitor-counter i { color: #149954; } /* لون العين أخضر */
 </style>
 </head>
 <body>
 
-<h1>🌿 Our Official Links</h1>
+  <div class="header-container">
+    <h1>الروابط الرسمية لقناة عائلة أبو نايف</h1>
+    <h2>Official Links for Abu Naif Family Channel</h2>
+    <div style="margin-top:10px; font-size:24px;">🇵🇸</div>
+  </div>
 
-<a class="button paypal" href="https://www.paypal.com/paypalme/ibra7m" target="_blank"><i class="fa-brands fa-paypal"></i> PayPal Support</a>
-<a class="button usdt" href="https://ibb.co/TB81166s" target="_blank"><i class="fa-solid fa-dollar-sign"></i> USDT Support</a>
-<a class="button whatsapp" href="https://wa.me/972592596213" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Contact</a>
+  <div class="links-container">
+    
+    <a class="button paypal" href="https://www.paypal.com/paypalme/ibra7m" target="_blank">
+      <i class="fa-brands fa-paypal"></i>
+      <span>دعم القناة عبر PayPal</span>
+      <i class="fa-solid fa-chevron-left" style="font-size: 16px; opacity: 0.7;"></i>
+    </a>
 
-<a class="button youtube" href="https://www.youtube.com/@shahd_W_sham" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
-<a class="button youtube-member" href="https://www.youtube.com/channel/UC5WbXeTc4b9WOqIOYMVKbbg/join" target="_blank"><i class="fa-solid fa-gem"></i> YouTube Membership</a>
+    <a class="button usdt" href="https://ibb.co/TB81166s" target="_blank">
+      <i class="fa-solid fa-circle-dollar-to-slot"></i>
+      <span>دعم القناة عبر USDT</span>
+      <i class="fa-solid fa-chevron-left" style="font-size: 16px; opacity: 0.7;"></i>
+    </a>
 
-<a class="button tiktok" href="https://www.tiktok.com/@shahd_w_sham" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
-<a class="button tiktok-subscribe" href="https://vt.tiktok.com/ZSHK8FXDuLNJQ-GlhzM/" target="_blank"><i class="fa-solid fa-user-plus"></i> TikTok Follow</a>
+    <a class="button whatsapp" href="https://wa.me/972592596213" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>تواصل معنا واتساب</span>
+      <i class="fa-solid fa-chevron-left" style="font-size: 16px; opacity: 0.7;"></i>
+    </a>
 
-<p>🙏 Thank you for your support and following… You make a difference!</p>
+    <a class="button youtube" href="https://www.youtube.com/@shahd_W_sham" target="_blank">
+      <i class="fa-brands fa-youtube"></i>
+      <span>اشترك في قناتنا يوتيوب</span>
+      <i class="fa-solid fa-chevron-left" style="font-size: 16px; opacity: 0.7;"></i>
+    </a>
 
-<!-- صوت نقر خفيف -->
-<audio id="click-sound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+    <a class="button youtube-mem" href="https://www.youtube.com/channel/UC5WbXeTc4b9WOqIOYMVKbbg/join" target="_blank">
+      <i class="fa-solid fa-gem"></i>
+      <span>انتسب للعائلة (عضوية مميزة)</span>
+      <i class="fa-solid fa-chevron-left" style="font-size: 16px; opacity: 0.7;"></i>
+    </a>
 
-<script>
-  const buttons = document.querySelectorAll('.button');
-  const sound = document.getElementById('click-sound');
-  sound.volume = 0.1; // صوت خفيف جداً
+    <a class="button tiktok" href="https://www.tiktok.com/@shahd_w_sham" target="_blank">
+      <i class="fa-brands fa-tiktok"></i>
+      <span>تابعنا على تيك توك</span>
+      <i class="fa-solid fa-chevron-left" style="font-size: 16px; opacity: 0.7;"></i>
+    </a>
 
-  buttons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      // تشغيل الصوت
-      sound.currentTime = 0;
-      sound.play();
+  </div>
 
-      // فقاعات عند النقر
-      for (let i=0; i<5; i++) {
-        const bubble = document.createElement('span');
-        bubble.classList.add('bubble');
-        const x = (Math.random() - 0.5) * 100 + 'px';
-        bubble.style.setProperty('--x', x);
-        bubble.style.left = e.offsetX + 'px';
-        bubble.style.top = e.offsetY + 'px';
-        btn.appendChild(bubble);
-        setTimeout(() => bubble.remove(), 1000);
-      }
+  <div class="thank-you-card">
+    <p class="ar-text">
+      ✨ متابعينا الأعزاء ✨<br>
+      دعمكم ومحبتكم هي الوقود الذي يحركنا للاستمرار. أي مساهمة منكم تعني لنا الكثير وتساعدنا في تطوير المحتوى الذي تحبونه. شكراً لأنكم جزء من عائلتنا.
+    </p>
+    <div style="width: 50px; height: 2px; background: #ddd; margin: 10px auto;"></div>
+    <p class="en-text">
+      Your support and love are what keep us going. Any contribution means the world to us and helps us create the content you enjoy. Thank you for being part of our family.
+    </p>
+  </div>
+
+  <div class="visitor-counter">
+    <i class="fa-solid fa-eye"></i>
+    <span id="count" style="font-family: monospace; font-size: 16px;">0</span>
+    <span>Visits</span>
+  </div>
+
+  <audio id="click-sound" src="https://www.soundjay.com/misc/sounds/bubble-pop-1.mp3"></audio>
+
+  <script>
+    const buttons = document.querySelectorAll('.button');
+    const sound = document.getElementById('click-sound');
+    sound.volume = 0.3;
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        sound.currentTime = 0;
+        sound.play().catch(e => console.log("Audio block"));
+
+        // فقاعات
+        for (let i=0; i<8; i++) {
+          const bubble = document.createElement('span');
+          bubble.classList.add('bubble');
+          const x = (Math.random() - 0.5) * 150 + 'px';
+          bubble.style.setProperty('--x', x);
+          
+          // جعل الفقاعات تظهر مكان النقر بالضبط
+          const rect = btn.getBoundingClientRect();
+          const relativeX = e.clientX - rect.left;
+          const relativeY = e.clientY - rect.top;
+          
+          bubble.style.left = relativeX + 'px';
+          bubble.style.top = relativeY + 'px';
+          
+          btn.appendChild(bubble);
+          setTimeout(() => bubble.remove(), 1000);
+        }
+      });
     });
-  });
-</script>
+
+    // العداد
+    document.addEventListener("DOMContentLoaded", () => {
+        const counterElement = document.getElementById("count");
+        let visits = localStorage.getItem("pageVisits_AbuNaif"); // تغيير المفتاح ليكون خاص بالقناة
+        
+        if (!visits) {
+            visits = 2300; // بداية قوية
+        } else {
+            visits = parseInt(visits) + 1;
+        }
+
+        localStorage.setItem("pageVisits_AbuNaif", visits);
+        counterElement.innerText = visits;
+    });
+  </script>
 
 </body>
 </html>
